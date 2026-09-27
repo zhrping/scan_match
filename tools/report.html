@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>扫描匹配结果</title>
+<!-- 页面样式：双图并排、窄屏单列，详细信息默认折叠。 -->
+<style>
+:root{font:15px/1.6 system-ui,sans-serif;color:#243447;background:#f3f6fa}body{max-width:1440px;margin:24px auto;padding:0 20px}h1{font-size:26px;margin:0}h2{font-size:18px;margin:0 0 8px}.muted{color:#617183;font-size:13px}.card{background:white;padding:20px;border:1px solid #dfe6ee;border-radius:12px;margin:16px 0}.top,.controls,.legend{display:flex;gap:16px;align-items:center;flex-wrap:wrap}select,button{font:inherit;padding:6px 12px;border:1px solid #c8d3df;border-radius:6px;background:white}button{cursor:pointer}select:focus,button:focus{outline:2px solid #1281bc}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:680px}th,td{text-align:left;border-bottom:1px solid #e9eef3;padding:10px 14px;vertical-align:top}th{background:#f6f8fb}td:first-child{width:19%;color:#617183}.pose{font-variant-numeric:tabular-nums}.plots{display:grid;grid-template-columns:1fr 1fr;gap:18px}.plot{min-width:0}canvas{width:100%;height:460px;display:block;border:1px solid #dfe6ee;border-radius:8px;cursor:crosshair;touch-action:none}label{cursor:pointer}.orange{color:#d9750a}.blue{color:#007ab8}.green{color:#12805c}details summary{cursor:pointer;font-weight:600}details p{margin:10px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7fa;padding:12px;max-height:360px;overflow:auto}a{color:#0075ad}img{max-width:100%}.detail-links{display:flex;gap:14px;flex-wrap:wrap;margin:12px 0}#new-note{min-height:24px}.coords{font-variant-numeric:tabular-nums;min-height:22px}#case-select{min-width:210px}@media(max-width:900px){.plots{grid-template-columns:1fr}canvas{height:380px}body{padding:0 10px}.card{padding:14px}}
+</style>
+</head>
+<body>
+<div class="top"><h1>扫描匹配结果</h1><label>查看场次 <select id="case-select"></select></label></div>
+<p class="muted">位置用厘米（cm），角度用度（°）。原日志与新算法的得分定义不同，不能直接比较大小。</p>
+<section class="card"><h2>得分与位置</h2><div class="table-wrap"><table><thead><tr><th>项目</th><th>原日志匹配</th><th>新算法匹配</th></tr></thead><tbody id="results"></tbody></table></div>
+<p id="new-note"></p><p class="muted">日志预测位置来自扫描结束前的位姿记录，属于代理值。日志候选位置由它加上日志修正估算；失败候选不表示机器人实际应用了修正。</p></section>
+<section class="card">
+<div class="controls"><label>右图结果 <select id="right-source"><option value="new">新算法候选</option><option value="log">原日志候选（估算）</option></select></label>
+<button id="fit">适配点云</button><button id="whole">查看整张地图</button></div>
+<div class="legend"><label><input id="map-on" type="checkbox" checked>地图</label><label class="orange"><input id="input-on" type="checkbox" checked>匹配前点云</label><label class="blue"><input id="output-on" type="checkbox" checked>匹配后点云</label><label><input id="pose-on" type="checkbox" checked>位置与朝向</label></div>
+<p class="muted">滚轮缩放，拖动平移，两图同步。鼠标移到地图上可查看坐标。黑色为障碍、灰色为未知、浅蓝色为缺失记录。</p>
+<div class="plots"><div class="plot"><h2 id="left-title">匹配前</h2><canvas id="before" aria-label="匹配前地图与点云"></canvas><div class="coords" id="before-coords">X：— cm　Y：— cm</div></div>
+<div class="plot"><h2 id="right-title">匹配后</h2><canvas id="after" aria-label="匹配后地图与点云"></canvas><div class="coords" id="after-coords">X：— cm　Y：— cm</div></div></div>
+<noscript>请开启 JavaScript 查看交互图，也可在场次目录打开 raw_map.png 或 overlay.png。</noscript>
+</section>
+<!-- 详细区没有open属性，因此初次打开及切场时均保持折叠。 -->
+<details class="card" id="debug"><summary>详细调试信息（默认折叠）</summary>
+<p id="diagnostics"></p><ul id="warnings"></ul><div class="detail-links" id="links"></div>
+<details><summary>输入来源与参数</summary><pre id="meta-json"></pre></details>
+<details><summary>全部新算法候选与诊断</summary><pre id="result-json"></pre></details>
+<details id="landscape-section"><summary>评分热力图与角度曲线</summary><img id="landscape" alt="评分面" loading="lazy"></details>
+</details>
+<!-- Python只替换这里的数据占位符；原日志文本中的小于号会被转义。 -->
+<script id="report-data" type="application/json">__REPORT_DATA__</script>
+<!-- 浏览器交互代码：地图与点云坐标都来自上方JSON，不执行匹配算法。 -->
+<script>
+// 启用严格模式，让隐式全局变量等错误及时暴露。
+'use strict';
+// 所有数据嵌入页面，无网络请求；file:// 直接打开也能使用。
+// 解析Python嵌入的JSON；页面所有图形数据都在本文件中，不发网络请求。
+const data=JSON.parse(document.getElementById('report-data').textContent);
+// 简化按id查DOM元素的操作，不是外部框架。
+const $=id=>document.getElementById(id);
+// 保存当前场次、地图纹理、前后点云与位姿，以及共享缩放/拖动状态；显示坐标为厘米。
+const state={item:null,texture:null,input:[],output:[],pred:null,post:null,cx:0,cy:0,span:1000,drag:null};
+// 把核心拒绝原因代码转成人能读懂的中文，未知代码原样保留。
+const reasonNames={low_score:'贴合分不足',low_known_coverage:'地图覆盖不足',low_near_ratio:'近障碍点不足',ambiguous:'候选位置存在歧义',search_boundary:'最佳候选位于搜索边界',too_few_points:'点数不足'};
+// 仅为显示把米/弧度转为厘米/度，算法数据本身不修改。
+const cmPose=p=>[p[0]*100,p[1]*100,p[2]*180/Math.PI];
+// 格式化位姿或修正量，修正显示正负号；缺失字段不补成0。
+const fmtPose=(p,delta=false)=>p ? `x ${delta&&p[0]>=0?'+':''}${p[0].toFixed(1)} cm，y ${delta&&p[1]>=0?'+':''}${p[1].toFixed(1)} cm，${delta?'Δθ':'θ'} ${delta&&p[2]>=0?'+':''}${p[2].toFixed(2)}°` : '—（未记录）';
+// 把旧日志x/y格数乘分辨率换算为米，角度字段本来就是弧度。
+function logCorrection(item){const b=item.meta.match.logged_best;return b?[b.dx_cells*item.meta.map.resolution_m,b.dy_cells*item.meta.map.resolution_m,b.dtheta_rad]:null;}
+// 由代理预测加日志修正估算旧候选，不能视为固件实际应用位置。
+function logPose(item){const c=logCorrection(item);return c?item.meta.prediction.map((v,i)=>v+c[i]):null;}
+// 用textContent创建表格单元格，避免日志字符串被解释成HTML。
+function row(name,oldValue,newValue){const tr=document.createElement('tr');for(const value of [name,oldValue,newValue]){const td=document.createElement('td');td.textContent=value;td.className='pose';tr.appendChild(td);}$('results').appendChild(tr);}
+// 有限数显示三位小数；缺失/非法值显示横线。
+function score(v){return Number.isFinite(v)?v.toFixed(3):'—';}
+// 将局部米制端点按位姿变换成世界坐标，再转厘米供画布显示。
+function transform(points,p){const c=Math.cos(p[2]),s=Math.sin(p[2]);return points.map(q=>[100*(p[0]+c*q[0]-s*q[1]),100*(p[1]+s*q[0]+c*q[1])]);}
+// 填充默认折叠的诊断、警告和下载链接，主要界面不堆原始JSON。
+function setDetails(item){
+ // 取得可选新结果、第一候选及输入元数据，提取模式结果可能为空。
+ const r=item.result,b=r?r.candidates[0]:null,m=item.meta;
+ // 展示点数、扫描跨度、覆盖/近障/穿障与PC耗时，明确诊断和板端性能的区别。
+ $('diagnostics').textContent=`输入 ${m.scan.count} 点，扫描角度跨度 ${m.scan.angle_span_deg.toFixed(1)}°；扫描逻辑行 ${m.scan.source_start_line}–${m.scan.source_end_line}。`+(r?` 已知区域 ${(b.known_ratio*100).toFixed(1)}%，近障碍 ${(b.near_ratio*100).toFixed(1)}%，射线冲突 ${(b.ray_conflict_ratio*100).toFixed(1)}%（仅诊断）；候选分差 ${r.margin===null?'无可用备选':r.margin.toFixed(4)}。PC 搜索 ${r.search_ms.toFixed(2)} ms${r.timing_includes_trace_io?'（含 CSV 输出）':''}，不能当作板端耗时。`:' 未运行新算法。');
+ // 先清空上次警告，再逐条用文本节点添加本场说明。
+ $('warnings').replaceChildren();for(const warning of m.warnings){const li=document.createElement('li');li.textContent=warning;$('warnings').appendChild(li);}
+ // 重建只指向真实生成文件的链接，新页打开并避免访问原窗口。
+ $('links').replaceChildren();for(const [file,label] of item.files){const a=document.createElement('a');a.href=item.prefix+file;a.textContent=label;a.target='_blank';a.rel='noopener';$('links').appendChild(a);}
+ // 详细区按缩进显示元数据和全部候选，未运行算法时明确说明。
+ $('meta-json').textContent=JSON.stringify(m,null,2);$('result-json').textContent=r?JSON.stringify(r,null,2):'未运行新算法';
+ // 检查本场实际是否生成评分面文件，没有时隐藏该区。
+ const hasLandscape=item.files.some(f=>f[0]==='landscape.png');$('landscape-section').hidden=!hasLandscape;
+ // 存在时设置图片路径，不存在时移除旧src防止串场显示。
+ if(hasLandscape)$('landscape').src=item.prefix+'landscape.png';else $('landscape').removeAttribute('src');
+ // 切换场次仍默认关闭调试信息，避免上一场展开状态掩盖主要结果。
+ // 切换场次时恢复所有details折叠，避免以前展开的调试信息遮住主要结果。
+ document.querySelectorAll('details').forEach(d=>d.open=false);
+}
+// 切换当前场次并重建数值表、细节和地图/点云。
+function selectCase(){
+ // 根据下拉框索引取场次，并更新全局视图状态。
+ const item=data.cases[Number($('case-select').value)];state.item=item;
+ // 分别保存原日志、新算法、最佳候选和原日志详细修正。
+ const m=item.meta.match,r=item.result,b=r?r.candidates[0]:null,lb=m.logged_best;
+ // 清除上一场表格，所有行重新来自当前场数据。
+ $('results').replaceChildren();
+ // 原日志成功/失败和新算法接受/拒绝分列，不混成一个“成功率”。
+ row('匹配状态',m.logged_status==='success'?'日志成功':'日志失败（候选未接受）',r?(r.accepted?'接受候选':'拒绝候选'):'未运行');
+ // 分别显示两种评分各自的阈值，二者定义不同不能直接比大小。
+ row('得分 / 阈值',`${score(lb?lb.score:m.logged_score)} / ${score(m.logged_threshold)}`,r?`${score(b.score)} / ${score(r.config.min_score)}`:'—');
+ // 区分日志代理预测和本次C程序实际预测，显示单位厘米/度。
+ row('预测位姿',fmtPose(cmPose(item.meta.prediction)),r?fmtPose(cmPose(r.prediction)):'—');
+ // 显示原日志换算后的修正及新候选修正，缺失字段保持未知。
+ row('修正量',fmtPose(logCorrection(item)?cmPose(logCorrection(item)):null,true),r?fmtPose(cmPose(b.correction),true):'—');
+ // 旧候选标“估算”，新候选展示实际输出；拒绝候选也可供诊断。
+ row('候选位姿',logPose(item)?fmtPose(cmPose(logPose(item)))+'（估算）':'—（未记录）',r?fmtPose(cmPose(b.pose)):'—');
+ // 只有新算法明确记录了预测分数，不能给旧日志编造匹配前得分。
+ row('匹配前 → 后得分','未记录旧算法的匹配前评分',r?`${score(r.predicted_score)} → ${score(b.score)}`:'—');
+ // 对接受结果提示人工核对，对拒绝列原因，提取模式说明只是日志重建。
+ $('new-note').textContent=r?(r.accepted?'新算法候选已通过实验阈值，请结合墙角与多面墙检查实际位置。':'未接受原因：'+r.reasons.map(x=>reasonNames[x]||x).join('、')):'本页只提取了日志；右图可查看按日志修正重建的候选点云，不是固件输出的修正后点云。';
+ // 没有新结果或没有旧修正时禁用对应选项，避免画出虚假点云。
+ $('right-source').options[0].disabled=!r;$('right-source').options[1].disabled=!logPose(item);
+ // 优先显示新算法；仅提取模式默认看日志候选。
+ $('right-source').value=r?'new':'log';
+ // 依次更新折叠诊断、地图纹理和点云，然后适配显示范围。
+ setDetails(item);createMap();updateClouds();
+}
+// 把占据数组转换为离屏画布纹理，缩放拖动时不必逐格重算颜色。
+function createMap(){
+ // 按真实地图宽高创建离屏画布，一像素对应一个格子。
+ const item=state.item,m=item.meta.map,canvas=document.createElement('canvas');canvas.width=m.width;canvas.height=m.height;
+ // 创建RGBA像素缓冲，并使用本次算法障碍阈值；仅提取模式用默认151。
+ const ctx=canvas.getContext('2d'),img=ctx.createImageData(m.width,m.height),threshold=item.result?item.result.config.occupied_threshold:151;
+ // 遍历地图[y,x]，图像像素y方向与世界坐标相反，需要翻转。
+ for(let y=0;y<m.height;y++)for(let x=0;x<m.width;x++){
+  // k是原图行优先索引，j是上下翻转后的RGBA字节起始位置。
+  const k=y*m.width+x,v=item.grid[k],j=((m.height-1-y)*m.width+x)*4;
+  // 先区分缺失，再区分未知、障碍、空闲，避免把128误当已知占据。
+  const color=!item.observed[k]?[217,230,237]:v===128?[164,174,184]:v>threshold?[30,42,53]:[255,255,255];
+  // 写入红绿蓝三通道与全不透明alpha。
+  img.data[j]=color[0];img.data[j+1]=color[1];img.data[j+2]=color[2];img.data[j+3]=255;
+ }
+ // 将像素提交给离屏纹理并缓存，供两张主画布共享。
+ ctx.putImageData(img,0,0);state.texture=canvas;
+}
+// 根据右图选的是新算法还是原日志，重新计算前后世界点云。
+function updateClouds(){
+ // 判断当前数据来源，新结果为空时不能使用新候选分支。
+ const item=state.item,r=item.result,isNew=$('right-source').value==='new'&&r;
+ // 选择对应预测位姿与候选；原日志候选可能完全没有记录。
+ const pred=isNew?r.prediction:item.meta.prediction,post=isNew?r.candidates[0].pose:logPose(item);
+ // 显示位姿换成厘米/度，同一局部点云按前后位姿生成两份显示坐标。
+ state.pred=cmPose(pred);state.post=post?cmPose(post):null;state.input=transform(item.points,pred);state.output=post?transform(item.points,post):[];
+ // 左图固定表示预测位置下的输入点云。
+ $('left-title').textContent='匹配前 · 预测位置与输入点云';
+ // 标题明确候选来源及是否拒绝，不能把失败候选标成已应用结果。
+ $('right-title').textContent=isNew?(r.accepted?'匹配后 · 新算法候选':'匹配后 · 未接受的新算法候选'):(post?'原日志候选 · 按修正估算'+(item.meta.match.logged_status==='failed'?'（未接受）':''):'原日志没有记录候选修正');
+ // 数据来源变化后重新适配点云范围，并同步重绘两图。
+ fitClouds();
+}
+// 根据前后点云和机器人位置共同确定视野，避免修正后点落到图外。
+function fitClouds(){
+ // 合并前后端点以及存在的机器人位置，构造显示包围盒。
+ const points=[...state.input,...state.output,state.pred.slice(0,2)];if(state.post)points.push(state.post.slice(0,2));
+ // 遍历所有显示点求最小/最大x/y。
+ let x0=Infinity,x1=-Infinity,y0=Infinity,y1=-Infinity;for(const p of points){x0=Math.min(x0,p[0]);x1=Math.max(x1,p[0]);y0=Math.min(y0,p[1]);y1=Math.max(y1,p[1]);}
+ // 设置共享视野中心与边长，并留至少100cm空间后重绘。
+ state.cx=(x0+x1)/2;state.cy=(y0+y1)/2;state.span=Math.max(x1-x0,y1-y0,100)+100;drawAll();
+}
+// 按完整地图中心和物理尺寸设置视野，额外留约10%边距。
+function wholeMap(){const m=state.item.meta.map;state.cx=(m.origin_center_m[0]+(m.width-1)*m.resolution_m/2)*100;state.cy=(m.origin_center_m[1]+(m.height-1)*m.resolution_m/2)*100;state.span=Math.max(m.width,m.height)*m.resolution_m*110;drawAll();}
+// 根据CSS画布尺寸和预留坐标尺边距计算每厘米像素数。
+function geometry(canvas){const w=canvas.clientWidth,h=canvas.clientHeight;return {w,h,scale:Math.min(w-76,h-70)/state.span};}
+// 把鼠标屏幕坐标反变换成厘米地图坐标，y方向需要翻转。
+function world(canvas,e){const box=canvas.getBoundingClientRect(),g=geometry(canvas);return [state.cx+(e.clientX-box.left-g.w/2)/g.scale,state.cy-(e.clientY-box.top-g.h/2)/g.scale];}
+// 绘制一张主画布；after决定是否叠加候选点云和位姿。
+function draw(canvas,after){
+ // 按屏幕像素密度设置画布真实像素数，避免高分屏文字模糊。
+ const dpr=window.devicePixelRatio||1,g=geometry(canvas);canvas.width=Math.round(g.w*dpr);canvas.height=Math.round(g.h*dpr);
+ // 把绘图单位恢复为CSS像素，并先填充统一背景。
+ const ctx=canvas.getContext('2d');ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#f7fafc';ctx.fillRect(0,0,g.w,g.h);
+ // 将厘米世界坐标映射到当前视野像素，使用两图共享的中心和比例。
+ const xy=p=>[g.w/2+(p[0]-state.cx)*g.scale,g.h/2-(p[1]-state.cy)*g.scale];
+ // 用户启用地图时绘制纹理；半格边界与离线Python绘图保持一致，关闭平滑保留格子。
+ if($('map-on').checked){const m=state.item.meta.map,res=m.resolution_m*100;const top=xy([m.origin_center_m[0]*100-res/2,m.origin_center_m[1]*100+(m.height-.5)*res]);ctx.imageSmoothingEnabled=false;ctx.drawImage(state.texture,top[0],top[1],m.width*res*g.scale,m.height*res*g.scale);}
+ // 定义端点绘制函数，匹配前可用空心标记，匹配后用实心标记。
+ const points=(values,color,hollow)=>{ctx.strokeStyle=color;ctx.fillStyle=color;for(const p of values){const q=xy(p);ctx.beginPath();ctx.arc(q[0],q[1],hollow?3.1:2.4,0,Math.PI*2);if(hollow)ctx.stroke();else ctx.fill();}};
+ // 左图输入为实心橙点，右图同一输入为空心橙点方便与候选叠加。
+ if($('input-on').checked)points(state.input,'#dc7b12',after);
+ // 仅右图且用户勾选时绘制蓝色候选端点。
+ if(after&&$('output-on').checked)points(state.output,'#007ab8',false);
+ // 绘制机器人十字、固定像素长度朝向箭头和文字；缺失位姿不画。
+ const pose=(p,color,label)=>{if(!p)return;const q=xy(p),a=p[2]*Math.PI/180;ctx.strokeStyle=color;ctx.lineWidth=2.5;ctx.beginPath();ctx.moveTo(q[0]-6,q[1]-6);ctx.lineTo(q[0]+6,q[1]+6);ctx.moveTo(q[0]-6,q[1]+6);ctx.lineTo(q[0]+6,q[1]-6);ctx.moveTo(q[0],q[1]);const end=[q[0]+26*Math.cos(a),q[1]-26*Math.sin(a)];ctx.lineTo(...end);ctx.moveTo(end[0]-9*Math.cos(a-.4),end[1]+9*Math.sin(a-.4));ctx.lineTo(...end);ctx.lineTo(end[0]-9*Math.cos(a+.4),end[1]+9*Math.sin(a+.4));ctx.stroke();ctx.lineWidth=1;ctx.font='12px system-ui';ctx.fillStyle=color;ctx.fillText(label,q[0]+9,q[1]+17);};
+ // 按开关显示预测位姿，右图再附加候选位姿。
+ if($('pose-on').checked){pose(state.pred,'#c66c08','预测');if(after)pose(state.post,'#007ab8','候选');}
+ // 坐标尺固定在画布边缘，缩放后仍用真实厘米坐标标注。
+ // 绘制坐标尺半透明背景，让地图边缘文字可读。
+ ctx.font='11px system-ui';ctx.fillStyle='rgba(255,255,255,.88)';ctx.fillRect(0,g.h-23,g.w,23);ctx.fillRect(0,0,59,g.h);ctx.fillStyle='#526477';
+ // 在画布边缘标出当前视野下的真实厘米坐标，缩放后自动更新。
+ for(let i=1;i<5;i++){const x=g.w*i/5,y=g.h*i/5;ctx.fillText((state.cx+(x-g.w/2)/g.scale).toFixed(0),x,g.h-7);ctx.fillText((state.cy-(y-g.h/2)/g.scale).toFixed(0),4,y);}
+ // 明确坐标轴名称与厘米单位。
+ ctx.fillText('X / cm',g.w-49,g.h-7);ctx.fillText('Y / cm',4,15);
+}
+// 有当前场次才重绘两张画布，避免页面初始化时访问空数据。
+function drawAll(){if(!state.item)return;draw($('before'),false);draw($('after'),true);}
+// 给两张图安装相同交互事件，它们共享视野状态所以同步缩放平移。
+for(const id of ['before','after']){
+ // 取得当前需要绑定交互的画布。
+ const canvas=$(id);
+ // 阻止页面滚动，以鼠标所在世界点为锚缩放，限制倍率和视野范围。
+ canvas.addEventListener('wheel',e=>{e.preventDefault();const p=world(canvas,e);const old=state.span;state.span=Math.max(20,Math.min(20000,old*Math.exp(Math.max(-100,Math.min(100,e.deltaY))*.002)));const f=state.span/old;state.cx=p[0]-(p[0]-state.cx)*f;state.cy=p[1]-(p[1]-state.cy)*f;drawAll();},{passive:false});
+ // 保存拖动起点和当时视野中心，并捕获指针以便拖出画布仍能结束。
+ canvas.addEventListener('pointerdown',e=>{state.drag={id:e.pointerId,x:e.clientX,y:e.clientY,cx:state.cx,cy:state.cy};canvas.setPointerCapture(e.pointerId);});
+ // 拖动时按像素变化更新世界视野；无论是否拖动都更新鼠标厘米坐标。
+ canvas.addEventListener('pointermove',e=>{if(state.drag&&state.drag.id===e.pointerId){const g=geometry(canvas);state.cx=state.drag.cx-(e.clientX-state.drag.x)/g.scale;state.cy=state.drag.cy+(e.clientY-state.drag.y)/g.scale;drawAll();}const p=world(canvas,e);$(id+'-coords').textContent=`X：${p[0].toFixed(1)} cm　Y：${p[1].toFixed(1)} cm`;});
+ // 抬起或取消指针都结束拖动，避免状态卡住。
+ for(const event of ['pointerup','pointercancel'])canvas.addEventListener(event,()=>state.drag=null);
+}
+// 图层复选框只控制绘制，不修改匹配输入或评分。
+for(const id of ['map-on','input-on','output-on','pose-on'])$(id).addEventListener('change',drawAll);
+// 绑定适配、整图、来源切换、场次切换以及窗口尺寸变化事件。
+$('fit').addEventListener('click',fitClouds);$('whole').addEventListener('click',wholeMap);$('right-source').addEventListener('change',updateClouds);$('case-select').addEventListener('change',selectCase);window.addEventListener('resize',drawAll);
+// 按报告数据创建场次下拉项，显示原编号与原日志成功/失败。
+for(let i=0;i<data.cases.length;i++){const m=data.cases[i].meta.match,o=document.createElement('option');o.value=String(i);o.textContent=`#${m.index} · 日志${m.logged_status==='success'?'成功':'失败'}`;$('case-select').appendChild(o);}
+// 默认选择首个场次并渲染，页面无需外部请求即可查看。
+$('case-select').value='0';selectCase();
+</script>
+</body></html>

@@ -1,0 +1,10 @@
+# Python运行生成的字节码，不属于源码。
+__pycache__/
+# 日志提取、图片和HTML报告均可由脚本重新生成。
+output/
+# 默认CMake构建目录。
+build/
+# 本地Python虚拟环境，不随项目提交。
+.venv/
+# 调试、回归和内存检查等独立CMake构建目录。
+build-*/

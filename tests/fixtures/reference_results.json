@@ -1,0 +1,3785 @@
+{
+  "log_sha256": "f0921565d80f460a3bfb02913813775527f755d8fa3667e19c35221beb600ef5",
+  "meaning": "Frozen double/five-level results before removing the reference build; timing is historical, not a fresh benchmark.",
+  "cases": {
+    "0": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0.82,
+        -0.56,
+        3.55
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.95558886826,
+      "discrete_score": 0.961554648492,
+      "discrete_best": [
+        0.82,
+        -0.56,
+        3.55872664626
+      ],
+      "margin": 0.0323814514344,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 26,
+      "evaluated": 3991,
+      "pruned": 3748,
+      "field_bytes": 327680,
+      "workspace_bytes": 416,
+      "build_ms": 1.577858,
+      "search_ms": 5.412379,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            0.862499413938,
+            -0.602925796506,
+            3.57716896953
+          ],
+          "correction": [
+            0.042499413938,
+            -0.0429257965058,
+            0.0271689695314
+          ],
+          "score": 0.982146661315,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.5625,
+          "ray_valid_count": 16,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.0398355033699,
+            -0.533734928087,
+            3.53666967205
+          ],
+          "correction": [
+            -0.78016449663,
+            0.0262650719132,
+            -0.0133303279532
+          ],
+          "score": 0.949765209881,
+          "known_ratio": 0.961538462,
+          "near_ratio": 0.961538462,
+          "ray_conflict_ratio": 1,
+          "ray_valid_count": 16,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.40429066721,
+            -0.559363043303,
+            3.54777837925
+          ],
+          "correction": [
+            -0.41570933279,
+            0.000636956696905,
+            -0.00222162075013
+          ],
+          "score": 0.913512548902,
+          "known_ratio": 0.961538462,
+          "near_ratio": 0.884615385,
+          "ray_conflict_ratio": 1,
+          "ray_valid_count": 16,
+          "boundary": false
+        }
+      ]
+    },
+    "1": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0.44,
+        -0.03,
+        2.82
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.75084704244,
+      "discrete_score": 0.877213371206,
+      "discrete_best": [
+        0.44,
+        -0.03,
+        2.8636332313
+      ],
+      "margin": 0.129226959047,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 273,
+      "evaluated": 4241,
+      "pruned": 5368,
+      "field_bytes": 327680,
+      "workspace_bytes": 4368,
+      "build_ms": 1.627193,
+      "search_ms": 68.102715,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            0.38356049216,
+            -0.0431349091017,
+            2.86258963482
+          ],
+          "correction": [
+            -0.0564395078402,
+            -0.0131349091017,
+            0.0425896348214
+          ],
+          "score": 0.888941378064,
+          "known_ratio": 0.963369963,
+          "near_ratio": 0.904761905,
+          "ray_conflict_ratio": 0.0695970696,
+          "ray_valid_count": 273,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.557766665319,
+            -0.152859718231,
+            2.94985626512
+          ],
+          "correction": [
+            0.117766665319,
+            -0.122859718231,
+            0.129856265125
+          ],
+          "score": 0.759714419017,
+          "known_ratio": 0.912087912,
+          "near_ratio": 0.772893773,
+          "ray_conflict_ratio": 0.216117216,
+          "ray_valid_count": 273,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.743343525719,
+            -0.0306115391946,
+            2.85590609858
+          ],
+          "correction": [
+            0.303343525719,
+            -0.000611539194554,
+            0.0359060985822
+          ],
+          "score": 0.697496891129,
+          "known_ratio": 0.992673993,
+          "near_ratio": 0.681318681,
+          "ray_conflict_ratio": 0.0805860806,
+          "ray_valid_count": 273,
+          "boundary": false
+        }
+      ]
+    },
+    "2": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0,
+        0.48,
+        3.04
+      ],
+      "accepted": false,
+      "reason_bits": 8,
+      "reasons": [
+        "ambiguous"
+      ],
+      "predicted_score": 0.860364013975,
+      "discrete_score": 0.91460004017,
+      "discrete_best": [
+        0,
+        0.96,
+        3.06617993878
+      ],
+      "margin": 0.00613627647468,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 28,
+      "evaluated": 4597,
+      "pruned": 4338,
+      "field_bytes": 327680,
+      "workspace_bytes": 448,
+      "build_ms": 1.582429,
+      "search_ms": 6.590194,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            -0.0316453104607,
+            0.934552750859,
+            3.05559395987
+          ],
+          "correction": [
+            -0.0316453104607,
+            0.454552750859,
+            0.0155939598661
+          ],
+          "score": 0.931361233798,
+          "known_ratio": 0.964285714,
+          "near_ratio": 0.964285714,
+          "ray_conflict_ratio": 0.392857143,
+          "ray_valid_count": 28,
+          "boundary": false
+        },
+        {
+          "pose": [
+            -0.0392314656501,
+            0.481661086737,
+            3.06654102877
+          ],
+          "correction": [
+            -0.0392314656501,
+            0.0016610867371,
+            0.0265410287713
+          ],
+          "score": 0.925224957323,
+          "known_ratio": 0.964285714,
+          "near_ratio": 0.928571429,
+          "ray_conflict_ratio": 0.464285714,
+          "ray_valid_count": 28,
+          "boundary": false
+        },
+        {
+          "pose": [
+            -0.0438980644913,
+            0.112734286533,
+            3.07054978493
+          ],
+          "correction": [
+            -0.0438980644913,
+            -0.367265713467,
+            0.0305497849319
+          ],
+          "score": 0.905737410786,
+          "known_ratio": 0.928571429,
+          "near_ratio": 0.964285714,
+          "ray_conflict_ratio": 0.357142857,
+          "ray_valid_count": 28,
+          "boundary": false
+        }
+      ]
+    },
+    "3": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        -0.07,
+        0.16,
+        1.64
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.853220035818,
+      "discrete_score": 0.870669211446,
+      "discrete_best": [
+        -0.07,
+        0.16,
+        1.66617993878
+      ],
+      "margin": 0.0336620687061,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 40,
+      "evaluated": 5523,
+      "pruned": 3616,
+      "field_bytes": 327680,
+      "workspace_bytes": 640,
+      "build_ms": 1.583104,
+      "search_ms": 9.641497,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            -0.112645576073,
+            0.110996031023,
+            1.6488770727
+          ],
+          "correction": [
+            -0.0426455760732,
+            -0.0490039689767,
+            0.00887707269726
+          ],
+          "score": 0.899809736355,
+          "known_ratio": 0.925,
+          "near_ratio": 0.925,
+          "ray_conflict_ratio": 0.28125,
+          "ray_valid_count": 32,
+          "boundary": false
+        },
+        {
+          "pose": [
+            -0.11043751311,
+            0.580518880319,
+            1.63416601419
+          ],
+          "correction": [
+            -0.0404375131103,
+            0.420518880319,
+            -0.00583398581285
+          ],
+          "score": 0.866147667649,
+          "known_ratio": 0.925,
+          "near_ratio": 0.875,
+          "ray_conflict_ratio": 0.40625,
+          "ray_valid_count": 32,
+          "boundary": false
+        },
+        {
+          "pose": [
+            -0.0949926901705,
+            1.04715971195,
+            1.63181039848
+          ],
+          "correction": [
+            -0.0249926901705,
+            0.887159711947,
+            -0.00818960152093
+          ],
+          "score": 0.815908586599,
+          "known_ratio": 0.925,
+          "near_ratio": 0.85,
+          "ray_conflict_ratio": 0.40625,
+          "ray_valid_count": 32,
+          "boundary": false
+        }
+      ]
+    },
+    "4": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        0.59,
+        3.09
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.450530759242,
+      "discrete_score": 0.955678751,
+      "discrete_best": [
+        5.52,
+        0.71,
+        3.15981317008
+      ],
+      "margin": 0.116745780698,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 72,
+      "evaluated": 4196,
+      "pruned": 4557,
+      "field_bytes": 327680,
+      "workspace_bytes": 1152,
+      "build_ms": 1.576918,
+      "search_ms": 16.467737,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.46922900169,
+            0.683716069023,
+            3.15064360814
+          ],
+          "correction": [
+            -0.410770998313,
+            0.0937160690228,
+            0.06064360814
+          ],
+          "score": 0.964749420872,
+          "known_ratio": 0.972222222,
+          "near_ratio": 0.986111111,
+          "ray_conflict_ratio": 0.0694444444,
+          "ray_valid_count": 72,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.64096949545,
+            0.95054009005,
+            3.23791007644
+          ],
+          "correction": [
+            -0.239030504551,
+            0.36054009005,
+            0.147910076437
+          ],
+          "score": 0.848003640174,
+          "known_ratio": 0.916666667,
+          "near_ratio": 0.805555556,
+          "ray_conflict_ratio": 0.0416666667,
+          "ray_valid_count": 72,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.39374304185,
+            0.466946924165,
+            3.06337060581
+          ],
+          "correction": [
+            -0.486256958145,
+            -0.123053075835,
+            -0.0266293941913
+          ],
+          "score": 0.726131572313,
+          "known_ratio": 0.875,
+          "near_ratio": 0.722222222,
+          "ray_conflict_ratio": 0.180555556,
+          "ray_valid_count": 72,
+          "boundary": false
+        }
+      ]
+    },
+    "5": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        1.21,
+        0.59,
+        3.05
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.361670643855,
+      "discrete_score": 0.929003886394,
+      "discrete_best": [
+        1.45,
+        0.83,
+        3.04127335374
+      ],
+      "margin": 0.233238661696,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 174,
+      "evaluated": 3709,
+      "pruned": 5148,
+      "field_bytes": 327680,
+      "workspace_bytes": 2784,
+      "build_ms": 1.574744,
+      "search_ms": 40.039134,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            1.43531863004,
+            0.80770043806,
+            3.0460026419
+          ],
+          "correction": [
+            0.225318630042,
+            0.21770043806,
+            -0.00399735810347
+          ],
+          "score": 0.935987553224,
+          "known_ratio": 0.982758621,
+          "near_ratio": 0.948275862,
+          "ray_conflict_ratio": 0.0517241379,
+          "ray_valid_count": 174,
+          "boundary": false
+        },
+        {
+          "pose": [
+            1.79473893567,
+            0.829618259504,
+            3.04128580064
+          ],
+          "correction": [
+            0.584738935667,
+            0.239618259504,
+            -0.00871419935716
+          ],
+          "score": 0.702748891528,
+          "known_ratio": 0.954022989,
+          "near_ratio": 0.672413793,
+          "ray_conflict_ratio": 0.0862068966,
+          "ray_valid_count": 174,
+          "boundary": false
+        },
+        {
+          "pose": [
+            1.56795219994,
+            0.706655683471,
+            3.13327586735
+          ],
+          "correction": [
+            0.357952199935,
+            0.116655683471,
+            0.0832758673464
+          ],
+          "score": 0.687556150072,
+          "known_ratio": 0.850574713,
+          "near_ratio": 0.67816092,
+          "ray_conflict_ratio": 0.25862069,
+          "ray_valid_count": 174,
+          "boundary": false
+        }
+      ]
+    },
+    "6": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0,
+        0.59,
+        1.61
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.511734718848,
+      "discrete_score": 0.924117188414,
+      "discrete_best": [
+        0.12,
+        1.07,
+        1.59254670748
+      ],
+      "margin": 0.0624851559567,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 34,
+      "evaluated": 2676,
+      "pruned": 4281,
+      "field_bytes": 327680,
+      "workspace_bytes": 544,
+      "build_ms": 1.624249,
+      "search_ms": 6.206708,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            0.0485456097672,
+            0.922509605629,
+            1.56467542657
+          ],
+          "correction": [
+            0.0485456097672,
+            0.332509605629,
+            -0.0453245734308
+          ],
+          "score": 0.967880193506,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.294117647,
+          "ray_valid_count": 34,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.148168870858,
+            1.40603142619,
+            1.60155661881
+          ],
+          "correction": [
+            0.148168870858,
+            0.816031426189,
+            -0.00844338119094
+          ],
+          "score": 0.905395037549,
+          "known_ratio": 1,
+          "near_ratio": 0.911764706,
+          "ray_conflict_ratio": 0.235294118,
+          "ray_valid_count": 34,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.000609584571498,
+            0.945546216913,
+            1.47740790783
+          ],
+          "correction": [
+            0.000609584571498,
+            0.355546216913,
+            -0.132592092173
+          ],
+          "score": 0.856652490191,
+          "known_ratio": 1,
+          "near_ratio": 0.941176471,
+          "ray_conflict_ratio": 0,
+          "ray_valid_count": 34,
+          "boundary": false
+        }
+      ]
+    },
+    "7": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        0.83,
+        3.09
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.598797454965,
+      "discrete_score": 0.974988896327,
+      "discrete_best": [
+        5.52,
+        0.95,
+        3.08127335374
+      ],
+      "margin": 0.0952809499533,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 64,
+      "evaluated": 1985,
+      "pruned": 3786,
+      "field_bytes": 327680,
+      "workspace_bytes": 1024,
+      "build_ms": 1.58013,
+      "search_ms": 9.891701,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.4802818554,
+            0.938645761872,
+            3.0738474984
+          ],
+          "correction": [
+            -0.399718144598,
+            0.108645761872,
+            -0.0161525016002
+          ],
+          "score": 0.978526378371,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.09375,
+          "ray_valid_count": 64,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.73798111332,
+            1.1900273722,
+            3.15120985685
+          ],
+          "correction": [
+            -0.14201888668,
+            0.360027372204,
+            0.061209856846
+          ],
+          "score": 0.883245428417,
+          "known_ratio": 0.984375,
+          "near_ratio": 0.90625,
+          "ray_conflict_ratio": 0.125,
+          "ray_valid_count": 64,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.28201970726,
+            0.70963984832,
+            2.98658044866
+          ],
+          "correction": [
+            -0.597980292742,
+            -0.12036015168,
+            -0.103419551337
+          ],
+          "score": 0.728467544929,
+          "known_ratio": 0.84375,
+          "near_ratio": 0.71875,
+          "ray_conflict_ratio": 0.203125,
+          "ray_valid_count": 64,
+          "boundary": false
+        }
+      ]
+    },
+    "8": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0.65,
+        0.83,
+        3.25
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.489042174967,
+      "discrete_score": 0.926121804331,
+      "discrete_best": [
+        0.89,
+        1.07,
+        3.21509341496
+      ],
+      "margin": 0.209267392599,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 162,
+      "evaluated": 3053,
+      "pruned": 4518,
+      "field_bytes": 327680,
+      "workspace_bytes": 2592,
+      "build_ms": 1.645266,
+      "search_ms": 32.458744,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            0.924746353224,
+            1.04162084415,
+            3.21886549831
+          ],
+          "correction": [
+            0.274746353224,
+            0.211620844154,
+            -0.0311345016852
+          ],
+          "score": 0.935293299079,
+          "known_ratio": 0.975308642,
+          "near_ratio": 0.962962963,
+          "ray_conflict_ratio": 0.0617283951,
+          "ray_valid_count": 162,
+          "boundary": false
+        },
+        {
+          "pose": [
+            1.28451990741,
+            1.05441525058,
+            3.21548364933
+          ],
+          "correction": [
+            0.634519907408,
+            0.224415250585,
+            -0.03451635067
+          ],
+          "score": 0.72602590648,
+          "known_ratio": 0.956790123,
+          "near_ratio": 0.703703704,
+          "ray_conflict_ratio": 0.0864197531,
+          "ray_valid_count": 162,
+          "boundary": false
+        },
+        {
+          "pose": [
+            1.01229942948,
+            0.843187883776,
+            3.30613198798
+          ],
+          "correction": [
+            0.36229942948,
+            0.0131878837761,
+            0.0561319879807
+          ],
+          "score": 0.705422738661,
+          "known_ratio": 0.87654321,
+          "near_ratio": 0.74691358,
+          "ray_conflict_ratio": 0.25308642,
+          "ray_valid_count": 162,
+          "boundary": false
+        }
+      ]
+    },
+    "9": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0,
+        0.84,
+        1.63
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.832848544775,
+      "discrete_score": 0.951898563592,
+      "discrete_best": [
+        0.12,
+        1.08,
+        1.66490658504
+      ],
+      "margin": 0.0368902131234,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 27,
+      "evaluated": 2812,
+      "pruned": 4558,
+      "field_bytes": 327680,
+      "workspace_bytes": 432,
+      "build_ms": 1.576842,
+      "search_ms": 5.351596,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            0.0401167620377,
+            1.05574547861,
+            1.63441278781
+          ],
+          "correction": [
+            0.0401167620377,
+            0.215745478608,
+            0.00441278781246
+          ],
+          "score": 0.967354943415,
+          "known_ratio": 0.962962963,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.407407407,
+          "ray_valid_count": 27,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.125017217959,
+            1.56170001405,
+            1.64623562525
+          ],
+          "correction": [
+            0.125017217959,
+            0.721700014053,
+            0.0162356252507
+          ],
+          "score": 0.930464730291,
+          "known_ratio": 1,
+          "near_ratio": 0.962962963,
+          "ray_conflict_ratio": 0.296296296,
+          "ray_valid_count": 27,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.0635704515188,
+            -0.349767841057,
+            1.68897588471
+          ],
+          "correction": [
+            0.0635704515188,
+            -1.18976784106,
+            0.058975884713
+          ],
+          "score": 0.901063095827,
+          "known_ratio": 0.925925926,
+          "near_ratio": 0.888888889,
+          "ray_conflict_ratio": 0.296296296,
+          "ray_valid_count": 27,
+          "boundary": false
+        }
+      ]
+    },
+    "10": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        1.07,
+        3.09
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.559848137526,
+      "discrete_score": 0.979558830373,
+      "discrete_best": [
+        5.64,
+        1.43,
+        3.15108652382
+      ],
+      "margin": 0.102306858676,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 64,
+      "evaluated": 2535,
+      "pruned": 4304,
+      "field_bytes": 327680,
+      "workspace_bytes": 1024,
+      "build_ms": 1.665094,
+      "search_ms": 11.646455,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.57681895309,
+            1.34751246524,
+            3.13703970585
+          ],
+          "correction": [
+            -0.303181046908,
+            0.277512465235,
+            0.0470397058513
+          ],
+          "score": 0.985066907865,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.0625,
+          "ray_valid_count": 64,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.76229652986,
+            1.56328631345,
+            3.22430649046
+          ],
+          "correction": [
+            -0.117703470138,
+            0.49328631345,
+            0.134306490457
+          ],
+          "score": 0.882760049189,
+          "known_ratio": 0.984375,
+          "near_ratio": 0.890625,
+          "ray_conflict_ratio": 0.03125,
+          "ray_valid_count": 64,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.51277684468,
+            1.076414116,
+            3.04977280747
+          ],
+          "correction": [
+            -0.367223155319,
+            0.00641411600408,
+            -0.0402271925267
+          ],
+          "score": 0.795046299567,
+          "known_ratio": 0.90625,
+          "near_ratio": 0.78125,
+          "ray_conflict_ratio": 0.15625,
+          "ray_valid_count": 64,
+          "boundary": false
+        }
+      ]
+    },
+    "11": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0.32,
+        1.07,
+        2.97
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.120882448244,
+      "discrete_score": 0.88853276629,
+      "discrete_best": [
+        0.56,
+        1.55,
+        2.95254670748
+      ],
+      "margin": 0.211097291202,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 162,
+      "evaluated": 2906,
+      "pruned": 4557,
+      "field_bytes": 327680,
+      "workspace_bytes": 2592,
+      "build_ms": 1.634328,
+      "search_ms": 32.115399,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            0.598275260007,
+            1.58797520727,
+            2.94138121648
+          ],
+          "correction": [
+            0.278275260007,
+            0.517975207268,
+            -0.0286187835236
+          ],
+          "score": 0.919825908874,
+          "known_ratio": 0.975308642,
+          "near_ratio": 0.944444444,
+          "ray_conflict_ratio": 0.118012422,
+          "ray_valid_count": 161,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.956594750573,
+            1.55311329822,
+            2.95056712599
+          ],
+          "correction": [
+            0.636594750573,
+            0.483113298217,
+            -0.0194328740121
+          ],
+          "score": 0.708728617672,
+          "known_ratio": 0.944444444,
+          "near_ratio": 0.679012346,
+          "ray_conflict_ratio": 0.111801242,
+          "ray_valid_count": 161,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.689691803205,
+            1.42952555997,
+            3.03783379777
+          ],
+          "correction": [
+            0.369691803205,
+            0.359525559973,
+            0.0678337977706
+          ],
+          "score": 0.667574520093,
+          "known_ratio": 0.851851852,
+          "near_ratio": 0.648148148,
+          "ray_conflict_ratio": 0.223602484,
+          "ray_valid_count": 161,
+          "boundary": false
+        }
+      ]
+    },
+    "12": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0,
+        1.07,
+        1.61
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.644237931072,
+      "discrete_score": 0.980475534193,
+      "discrete_best": [
+        0.12,
+        1.67,
+        1.59254670748
+      ],
+      "margin": 0.0432989646609,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 26,
+      "evaluated": 1874,
+      "pruned": 4202,
+      "field_bytes": 327680,
+      "workspace_bytes": 416,
+      "build_ms": 1.576315,
+      "search_ms": 4.237566,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            0.135342486783,
+            1.71934184553,
+            1.59895165225
+          ],
+          "correction": [
+            0.135342486783,
+            0.649341845527,
+            -0.0110483477499
+          ],
+          "score": 0.986674901804,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.115384615,
+          "ray_valid_count": 26,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.0141346754264,
+            1.66551329071,
+            1.51167957188
+          ],
+          "correction": [
+            0.0141346754264,
+            0.59551329071,
+            -0.0983204281195
+          ],
+          "score": 0.943375937143,
+          "known_ratio": 0.961538462,
+          "near_ratio": 0.961538462,
+          "ray_conflict_ratio": 0.0769230769,
+          "ray_valid_count": 26,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.103343521356,
+            2.14603849805,
+            1.56785988698
+          ],
+          "correction": [
+            0.103343521356,
+            1.07603849805,
+            -0.0421401130174
+          ],
+          "score": 0.912740691095,
+          "known_ratio": 1,
+          "near_ratio": 0.923076923,
+          "ray_conflict_ratio": 0.346153846,
+          "ray_valid_count": 26,
+          "boundary": false
+        }
+      ]
+    },
+    "13": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        1.31,
+        3.1
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.150764051075,
+      "discrete_score": 0.996390829212,
+      "discrete_best": [
+        5.64,
+        2.03,
+        3.16981317008
+      ],
+      "margin": 0.0440641408721,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 59,
+      "evaluated": 2197,
+      "pruned": 4237,
+      "field_bytes": 327680,
+      "workspace_bytes": 944,
+      "build_ms": 1.637983,
+      "search_ms": 10.040005,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.63315209306,
+            2.02455842831,
+            3.16964428429
+          ],
+          "correction": [
+            -0.246847906937,
+            0.714558428306,
+            0.0696442842898
+          ],
+          "score": 0.997764030006,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.0677966102,
+          "ray_valid_count": 59,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.50956573642,
+            1.78729492494,
+            3.08237666499
+          ],
+          "correction": [
+            -0.370434263579,
+            0.477294924938,
+            -0.0176233350129
+          ],
+          "score": 0.953699889134,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.186440678,
+          "ray_valid_count": 59,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.76025890044,
+            2.26963083216,
+            3.25691079197
+          ],
+          "correction": [
+            -0.119741099565,
+            0.959630832159,
+            0.156910791969
+          ],
+          "score": 0.768991642382,
+          "known_ratio": 0.847457627,
+          "near_ratio": 0.745762712,
+          "ray_conflict_ratio": 0.338983051,
+          "ray_valid_count": 59,
+          "boundary": false
+        }
+      ]
+    },
+    "14": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        1.31,
+        3.1
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.150764051075,
+      "discrete_score": 0.996390829212,
+      "discrete_best": [
+        5.64,
+        2.03,
+        3.16981317008
+      ],
+      "margin": 0.0440641408721,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 59,
+      "evaluated": 2197,
+      "pruned": 4237,
+      "field_bytes": 327680,
+      "workspace_bytes": 944,
+      "build_ms": 1.636283,
+      "search_ms": 10.118202,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.63315209306,
+            2.02455842831,
+            3.16964428429
+          ],
+          "correction": [
+            -0.246847906937,
+            0.714558428306,
+            0.0696442842898
+          ],
+          "score": 0.997764030006,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.0677966102,
+          "ray_valid_count": 59,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.50956573642,
+            1.78729492494,
+            3.08237666499
+          ],
+          "correction": [
+            -0.370434263579,
+            0.477294924938,
+            -0.0176233350129
+          ],
+          "score": 0.953699889134,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.186440678,
+          "ray_valid_count": 59,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.76025890044,
+            2.26963083216,
+            3.25691079197
+          ],
+          "correction": [
+            -0.119741099565,
+            0.959630832159,
+            0.156910791969
+          ],
+          "score": 0.768991642382,
+          "known_ratio": 0.847457627,
+          "near_ratio": 0.745762712,
+          "ray_conflict_ratio": 0.338983051,
+          "ray_valid_count": 59,
+          "boundary": false
+        }
+      ]
+    },
+    "15": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        1.31,
+        3.1
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.150764051075,
+      "discrete_score": 0.996390829212,
+      "discrete_best": [
+        5.64,
+        2.03,
+        3.16981317008
+      ],
+      "margin": 0.0440641408721,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 59,
+      "evaluated": 2197,
+      "pruned": 4237,
+      "field_bytes": 327680,
+      "workspace_bytes": 944,
+      "build_ms": 1.617952,
+      "search_ms": 10.010671,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.63315209306,
+            2.02455842831,
+            3.16964428429
+          ],
+          "correction": [
+            -0.246847906937,
+            0.714558428306,
+            0.0696442842898
+          ],
+          "score": 0.997764030006,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.0677966102,
+          "ray_valid_count": 59,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.50956573642,
+            1.78729492494,
+            3.08237666499
+          ],
+          "correction": [
+            -0.370434263579,
+            0.477294924938,
+            -0.0176233350129
+          ],
+          "score": 0.953699889134,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.186440678,
+          "ray_valid_count": 59,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.76025890044,
+            2.26963083216,
+            3.25691079197
+          ],
+          "correction": [
+            -0.119741099565,
+            0.959630832159,
+            0.156910791969
+          ],
+          "score": 0.768991642382,
+          "known_ratio": 0.847457627,
+          "near_ratio": 0.745762712,
+          "ray_conflict_ratio": 0.338983051,
+          "ray_valid_count": 59,
+          "boundary": false
+        }
+      ]
+    },
+    "16": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        1.31,
+        3.1
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.150764051075,
+      "discrete_score": 0.996390829212,
+      "discrete_best": [
+        5.64,
+        2.03,
+        3.16981317008
+      ],
+      "margin": 0.0440641408721,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 59,
+      "evaluated": 2197,
+      "pruned": 4237,
+      "field_bytes": 327680,
+      "workspace_bytes": 944,
+      "build_ms": 1.574802,
+      "search_ms": 10.142823,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.63315209306,
+            2.02455842831,
+            3.16964428429
+          ],
+          "correction": [
+            -0.246847906937,
+            0.714558428306,
+            0.0696442842898
+          ],
+          "score": 0.997764030006,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.0677966102,
+          "ray_valid_count": 59,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.50956573642,
+            1.78729492494,
+            3.08237666499
+          ],
+          "correction": [
+            -0.370434263579,
+            0.477294924938,
+            -0.0176233350129
+          ],
+          "score": 0.953699889134,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.186440678,
+          "ray_valid_count": 59,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.76025890044,
+            2.26963083216,
+            3.25691079197
+          ],
+          "correction": [
+            -0.119741099565,
+            0.959630832159,
+            0.156910791969
+          ],
+          "score": 0.768991642382,
+          "known_ratio": 0.847457627,
+          "near_ratio": 0.745762712,
+          "ray_conflict_ratio": 0.338983051,
+          "ray_valid_count": 59,
+          "boundary": false
+        }
+      ]
+    },
+    "17": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        1.31,
+        3.1
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.150764051075,
+      "discrete_score": 0.996390829212,
+      "discrete_best": [
+        5.64,
+        2.03,
+        3.16981317008
+      ],
+      "margin": 0.0440641408721,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 59,
+      "evaluated": 2197,
+      "pruned": 4237,
+      "field_bytes": 327680,
+      "workspace_bytes": 944,
+      "build_ms": 1.619082,
+      "search_ms": 10.255463,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.63315209306,
+            2.02455842831,
+            3.16964428429
+          ],
+          "correction": [
+            -0.246847906937,
+            0.714558428306,
+            0.0696442842898
+          ],
+          "score": 0.997764030006,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.0677966102,
+          "ray_valid_count": 59,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.50956573642,
+            1.78729492494,
+            3.08237666499
+          ],
+          "correction": [
+            -0.370434263579,
+            0.477294924938,
+            -0.0176233350129
+          ],
+          "score": 0.953699889134,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.186440678,
+          "ray_valid_count": 59,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.76025890044,
+            2.26963083216,
+            3.25691079197
+          ],
+          "correction": [
+            -0.119741099565,
+            0.959630832159,
+            0.156910791969
+          ],
+          "score": 0.768991642382,
+          "known_ratio": 0.847457627,
+          "near_ratio": 0.745762712,
+          "ray_conflict_ratio": 0.338983051,
+          "ray_valid_count": 59,
+          "boundary": false
+        }
+      ]
+    },
+    "18": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0,
+        1.31,
+        1.65
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.908711087485,
+      "discrete_score": 0.989458145859,
+      "discrete_best": [
+        0.12,
+        1.91,
+        1.6936332313
+      ],
+      "margin": 0.0521396457528,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 25,
+      "evaluated": 2262,
+      "pruned": 4298,
+      "field_bytes": 327680,
+      "workspace_bytes": 400,
+      "build_ms": 1.573999,
+      "search_ms": 4.448297,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            0.108059585131,
+            1.91144630869,
+            1.68569382365
+          ],
+          "correction": [
+            0.108059585131,
+            0.601446308694,
+            0.0356938236475
+          ],
+          "score": 0.996400005949,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.173913043,
+          "ray_valid_count": 23,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.000558972120165,
+            1.91472944598,
+            1.59842734226
+          ],
+          "correction": [
+            0.000558972120165,
+            0.604729445981,
+            -0.0515726577403
+          ],
+          "score": 0.944260360197,
+          "known_ratio": 0.96,
+          "near_ratio": 0.96,
+          "ray_conflict_ratio": 0.12,
+          "ray_valid_count": 25,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.119988476174,
+            1.55164356947,
+            1.69362950697
+          ],
+          "correction": [
+            0.119988476174,
+            0.241643569474,
+            0.0436295069731
+          ],
+          "score": 0.934334800826,
+          "known_ratio": 1,
+          "near_ratio": 0.96,
+          "ray_conflict_ratio": 0.08,
+          "ray_valid_count": 25,
+          "boundary": false
+        }
+      ]
+    },
+    "19": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        1.55,
+        3.08
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.197224532748,
+      "discrete_score": 0.995959142462,
+      "discrete_best": [
+        5.64,
+        2.15,
+        3.14108652382
+      ],
+      "margin": 0.0667613489773,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 58,
+      "evaluated": 2268,
+      "pruned": 4261,
+      "field_bytes": 327680,
+      "workspace_bytes": 928,
+      "build_ms": 1.579973,
+      "search_ms": 10.037263,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.63109095524,
+            2.18276481788,
+            3.14455480319
+          ],
+          "correction": [
+            -0.248909044757,
+            0.632764817879,
+            0.0645548031877
+          ],
+          "score": 0.999169611379,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.0517241379,
+          "ray_valid_count": 58,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.53638673394,
+            1.91980179795,
+            3.05728832943
+          ],
+          "correction": [
+            -0.343613266057,
+            0.369801797946,
+            -0.022711670575
+          ],
+          "score": 0.932408262401,
+          "known_ratio": 1,
+          "near_ratio": 0.982758621,
+          "ray_conflict_ratio": 0.206896552,
+          "ray_valid_count": 58,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.75821199914,
+            2.3841432909,
+            3.23182322827
+          ],
+          "correction": [
+            -0.121788000863,
+            0.834143290901,
+            0.151823228265
+          ],
+          "score": 0.844403300204,
+          "known_ratio": 0.982758621,
+          "near_ratio": 0.896551724,
+          "ray_conflict_ratio": 0.310344828,
+          "ray_valid_count": 58,
+          "boundary": false
+        }
+      ]
+    },
+    "20": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        1.55,
+        3.08
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.197224532748,
+      "discrete_score": 0.995959142462,
+      "discrete_best": [
+        5.64,
+        2.15,
+        3.14108652382
+      ],
+      "margin": 0.0667613489773,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 58,
+      "evaluated": 2268,
+      "pruned": 4261,
+      "field_bytes": 327680,
+      "workspace_bytes": 928,
+      "build_ms": 1.578963,
+      "search_ms": 10.599116,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.63109095524,
+            2.18276481788,
+            3.14455480319
+          ],
+          "correction": [
+            -0.248909044757,
+            0.632764817879,
+            0.0645548031877
+          ],
+          "score": 0.999169611379,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.0517241379,
+          "ray_valid_count": 58,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.53638673394,
+            1.91980179795,
+            3.05728832943
+          ],
+          "correction": [
+            -0.343613266057,
+            0.369801797946,
+            -0.022711670575
+          ],
+          "score": 0.932408262401,
+          "known_ratio": 1,
+          "near_ratio": 0.982758621,
+          "ray_conflict_ratio": 0.206896552,
+          "ray_valid_count": 58,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.75821199914,
+            2.3841432909,
+            3.23182322827
+          ],
+          "correction": [
+            -0.121788000863,
+            0.834143290901,
+            0.151823228265
+          ],
+          "score": 0.844403300204,
+          "known_ratio": 0.982758621,
+          "near_ratio": 0.896551724,
+          "ray_conflict_ratio": 0.310344828,
+          "ray_valid_count": 58,
+          "boundary": false
+        }
+      ]
+    },
+    "21": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        1.55,
+        3.08
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.197224532748,
+      "discrete_score": 0.995959142462,
+      "discrete_best": [
+        5.64,
+        2.15,
+        3.14108652382
+      ],
+      "margin": 0.0667613489773,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 58,
+      "evaluated": 2268,
+      "pruned": 4261,
+      "field_bytes": 327680,
+      "workspace_bytes": 928,
+      "build_ms": 1.732635,
+      "search_ms": 10.582487,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.63109095524,
+            2.18276481788,
+            3.14455480319
+          ],
+          "correction": [
+            -0.248909044757,
+            0.632764817879,
+            0.0645548031877
+          ],
+          "score": 0.999169611379,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.0517241379,
+          "ray_valid_count": 58,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.53638673394,
+            1.91980179795,
+            3.05728832943
+          ],
+          "correction": [
+            -0.343613266057,
+            0.369801797946,
+            -0.022711670575
+          ],
+          "score": 0.932408262401,
+          "known_ratio": 1,
+          "near_ratio": 0.982758621,
+          "ray_conflict_ratio": 0.206896552,
+          "ray_valid_count": 58,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.75821199914,
+            2.3841432909,
+            3.23182322827
+          ],
+          "correction": [
+            -0.121788000863,
+            0.834143290901,
+            0.151823228265
+          ],
+          "score": 0.844403300204,
+          "known_ratio": 0.982758621,
+          "near_ratio": 0.896551724,
+          "ray_conflict_ratio": 0.310344828,
+          "ray_valid_count": 58,
+          "boundary": false
+        }
+      ]
+    },
+    "22": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        1.55,
+        3.08
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.197224532748,
+      "discrete_score": 0.995959142462,
+      "discrete_best": [
+        5.64,
+        2.15,
+        3.14108652382
+      ],
+      "margin": 0.0667613489773,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 58,
+      "evaluated": 2268,
+      "pruned": 4261,
+      "field_bytes": 327680,
+      "workspace_bytes": 928,
+      "build_ms": 1.643926,
+      "search_ms": 10.180701,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.63109095524,
+            2.18276481788,
+            3.14455480319
+          ],
+          "correction": [
+            -0.248909044757,
+            0.632764817879,
+            0.0645548031877
+          ],
+          "score": 0.999169611379,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.0517241379,
+          "ray_valid_count": 58,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.53638673394,
+            1.91980179795,
+            3.05728832943
+          ],
+          "correction": [
+            -0.343613266057,
+            0.369801797946,
+            -0.022711670575
+          ],
+          "score": 0.932408262401,
+          "known_ratio": 1,
+          "near_ratio": 0.982758621,
+          "ray_conflict_ratio": 0.206896552,
+          "ray_valid_count": 58,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.75821199914,
+            2.3841432909,
+            3.23182322827
+          ],
+          "correction": [
+            -0.121788000863,
+            0.834143290901,
+            0.151823228265
+          ],
+          "score": 0.844403300204,
+          "known_ratio": 0.982758621,
+          "near_ratio": 0.896551724,
+          "ray_conflict_ratio": 0.310344828,
+          "ray_valid_count": 58,
+          "boundary": false
+        }
+      ]
+    },
+    "23": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        1.55,
+        3.08
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.197224532748,
+      "discrete_score": 0.995959142462,
+      "discrete_best": [
+        5.64,
+        2.15,
+        3.14108652382
+      ],
+      "margin": 0.0667613489773,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 58,
+      "evaluated": 2268,
+      "pruned": 4261,
+      "field_bytes": 327680,
+      "workspace_bytes": 928,
+      "build_ms": 1.628183,
+      "search_ms": 10.017875,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.63109095524,
+            2.18276481788,
+            3.14455480319
+          ],
+          "correction": [
+            -0.248909044757,
+            0.632764817879,
+            0.0645548031877
+          ],
+          "score": 0.999169611379,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.0517241379,
+          "ray_valid_count": 58,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.53638673394,
+            1.91980179795,
+            3.05728832943
+          ],
+          "correction": [
+            -0.343613266057,
+            0.369801797946,
+            -0.022711670575
+          ],
+          "score": 0.932408262401,
+          "known_ratio": 1,
+          "near_ratio": 0.982758621,
+          "ray_conflict_ratio": 0.206896552,
+          "ray_valid_count": 58,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.75821199914,
+            2.3841432909,
+            3.23182322827
+          ],
+          "correction": [
+            -0.121788000863,
+            0.834143290901,
+            0.151823228265
+          ],
+          "score": 0.844403300204,
+          "known_ratio": 0.982758621,
+          "near_ratio": 0.896551724,
+          "ray_conflict_ratio": 0.310344828,
+          "ray_valid_count": 58,
+          "boundary": false
+        }
+      ]
+    },
+    "24": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0,
+        1.67,
+        5.82
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.381402354828,
+      "discrete_score": 0.942553389116,
+      "discrete_best": [
+        0.12,
+        2.15,
+        5.84617993878
+      ],
+      "margin": 0.268036377992,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 103,
+      "evaluated": 3925,
+      "pruned": 4767,
+      "field_bytes": 327680,
+      "workspace_bytes": 1648,
+      "build_ms": 1.575758,
+      "search_ms": 23.8395,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            0.0823975924187,
+            2.15614079463,
+            5.84880383185
+          ],
+          "correction": [
+            0.0823975924187,
+            0.486140794632,
+            0.0288038318537
+          ],
+          "score": 0.95305449275,
+          "known_ratio": 0.980582524,
+          "near_ratio": 0.980582524,
+          "ray_conflict_ratio": 0.0873786408,
+          "ray_valid_count": 103,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.209671090244,
+            2.49289358433,
+            5.79461481301
+          ],
+          "correction": [
+            0.209671090244,
+            0.822893584331,
+            -0.025385186993
+          ],
+          "score": 0.685018114758,
+          "known_ratio": 0.961165049,
+          "near_ratio": 0.59223301,
+          "ray_conflict_ratio": 0.145631068,
+          "ray_valid_count": 103,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.123941859298,
+            1.90884578737,
+            5.93607627983
+          ],
+          "correction": [
+            0.123941859298,
+            0.238845787368,
+            0.116076279827
+          ],
+          "score": 0.653752658018,
+          "known_ratio": 0.86407767,
+          "near_ratio": 0.601941748,
+          "ray_conflict_ratio": 0.257425743,
+          "ray_valid_count": 101,
+          "boundary": false
+        }
+      ]
+    },
+    "25": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        1.79,
+        3.11
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.21960472675,
+      "discrete_score": 0.995680707819,
+      "discrete_best": [
+        5.52,
+        2.27,
+        3.12745329252
+      ],
+      "margin": 0.0857621103154,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 58,
+      "evaluated": 1554,
+      "pruned": 3507,
+      "field_bytes": 327680,
+      "workspace_bytes": 928,
+      "build_ms": 1.632403,
+      "search_ms": 7.830438,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.51904654074,
+            2.25390084329,
+            3.12488753004
+          ],
+          "correction": [
+            -0.36095345926,
+            0.463900843294,
+            0.0148875300365
+          ],
+          "score": 0.997663799078,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.103448276,
+          "ray_valid_count": 58,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.39180662262,
+            1.96066145948,
+            3.03759508722
+          ],
+          "correction": [
+            -0.488193377378,
+            0.170661459481,
+            -0.0724049127833
+          ],
+          "score": 0.911901688763,
+          "known_ratio": 1,
+          "near_ratio": 0.965517241,
+          "ray_conflict_ratio": 0.155172414,
+          "ray_valid_count": 58,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.64380368806,
+            2.39232546849,
+            3.21215427861
+          ],
+          "correction": [
+            -0.236196311938,
+            0.602325468486,
+            0.102154278612
+          ],
+          "score": 0.863796092662,
+          "known_ratio": 0.965517241,
+          "near_ratio": 0.879310345,
+          "ray_conflict_ratio": 0.0517241379,
+          "ray_valid_count": 58,
+          "boundary": false
+        }
+      ]
+    },
+    "26": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0,
+        1.91,
+        1.68
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.400837270579,
+      "discrete_score": 0.912453928257,
+      "discrete_best": [
+        0,
+        2.39,
+        1.6363667687
+      ],
+      "margin": 0.21537762337,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 152,
+      "evaluated": 2500,
+      "pruned": 3916,
+      "field_bytes": 327680,
+      "workspace_bytes": 2432,
+      "build_ms": 1.578181,
+      "search_ms": 25.997518,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            -0.0361729130459,
+            2.39585503474,
+            1.63819337613
+          ],
+          "correction": [
+            -0.0361729130459,
+            0.485855034742,
+            -0.0418066238662
+          ],
+          "score": 0.918870295427,
+          "known_ratio": 0.986842105,
+          "near_ratio": 0.934210526,
+          "ray_conflict_ratio": 0.101351351,
+          "ray_valid_count": 148,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.323806269702,
+            2.38920457873,
+            1.6359228972
+          ],
+          "correction": [
+            0.323806269702,
+            0.479204578731,
+            -0.044077102799
+          ],
+          "score": 0.703492672056,
+          "known_ratio": 0.947368421,
+          "near_ratio": 0.677631579,
+          "ray_conflict_ratio": 0.108108108,
+          "ray_valid_count": 148,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.00390339737353,
+            2.15150327124,
+            1.72546897323
+          ],
+          "correction": [
+            0.00390339737353,
+            0.241503271237,
+            0.0454689732311
+          ],
+          "score": 0.681166055043,
+          "known_ratio": 0.907894737,
+          "near_ratio": 0.657894737,
+          "ray_conflict_ratio": 0.253424658,
+          "ray_valid_count": 146,
+          "boundary": false
+        }
+      ]
+    },
+    "28": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        2.03,
+        3.09
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.260836095124,
+      "discrete_score": 0.997988291971,
+      "discrete_best": [
+        5.52,
+        2.51,
+        3.14235987756
+      ],
+      "margin": 0.0819872794579,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 55,
+      "evaluated": 2024,
+      "pruned": 4211,
+      "field_bytes": 327680,
+      "workspace_bytes": 880,
+      "build_ms": 1.737268,
+      "search_ms": 9.199329,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.51999727324,
+            2.5395752656,
+            3.14009712683
+          ],
+          "correction": [
+            -0.360002726756,
+            0.509575265604,
+            0.0500971268298
+          ],
+          "score": 0.998514475435,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.163636364,
+          "ray_valid_count": 55,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.42405270361,
+            2.27870531186,
+            3.05283013433
+          ],
+          "correction": [
+            -0.455947296387,
+            0.248705311863,
+            -0.0371698656722
+          ],
+          "score": 0.916527195977,
+          "known_ratio": 0.981818182,
+          "near_ratio": 0.945454545,
+          "ray_conflict_ratio": 0.218181818,
+          "ray_valid_count": 55,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.63847125451,
+            2.74708731893,
+            3.22736360606
+          ],
+          "correction": [
+            -0.241528745495,
+            0.717087318929,
+            0.137363606064
+          ],
+          "score": 0.881648172454,
+          "known_ratio": 0.945454545,
+          "near_ratio": 0.945454545,
+          "ray_conflict_ratio": 0.345454545,
+          "ray_valid_count": 55,
+          "boundary": false
+        }
+      ]
+    },
+    "29": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0,
+        2.15,
+        6.22
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.375743308369,
+      "discrete_score": 0.895447808002,
+      "discrete_best": [
+        0,
+        2.51,
+        6.24617993878
+      ],
+      "margin": 0.272737207476,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 101,
+      "evaluated": 3131,
+      "pruned": 4644,
+      "field_bytes": 327680,
+      "workspace_bytes": 1616,
+      "build_ms": 1.642367,
+      "search_ms": 21.125313,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            -0.0439543993485,
+            2.56450624519,
+            6.23557159321
+          ],
+          "correction": [
+            -0.0439543993485,
+            0.414506245192,
+            0.0155715932077
+          ],
+          "score": 0.921038518874,
+          "known_ratio": 0.99009901,
+          "near_ratio": 0.95049505,
+          "ray_conflict_ratio": 0.104166667,
+          "ray_valid_count": 96,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.310366406494,
+            2.62823506249,
+            6.21976662984
+          ],
+          "correction": [
+            0.310366406494,
+            0.478235062495,
+            -0.000233370161468
+          ],
+          "score": 0.648301311398,
+          "known_ratio": 0.98019802,
+          "near_ratio": 0.633663366,
+          "ray_conflict_ratio": 0.114583333,
+          "ray_valid_count": 96,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.000324830237991,
+            2.2732125166,
+            6.32283842691
+          ],
+          "correction": [
+            0.000324830237991,
+            0.123212516601,
+            0.102838426913
+          ],
+          "score": 0.622153785733,
+          "known_ratio": 0.881188119,
+          "near_ratio": 0.584158416,
+          "ray_conflict_ratio": 0.270833333,
+          "ray_valid_count": 96,
+          "boundary": false
+        }
+      ]
+    },
+    "30": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        2.27,
+        3.07
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.389733602184,
+      "discrete_score": 0.995643304409,
+      "discrete_best": [
+        5.52,
+        2.63,
+        3.09617993878
+      ],
+      "margin": 0.0581180205762,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 50,
+      "evaluated": 1765,
+      "pruned": 3653,
+      "field_bytes": 327680,
+      "workspace_bytes": 800,
+      "build_ms": 1.574892,
+      "search_ms": 7.185436,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.50544065097,
+            2.64269158132,
+            3.09329630526
+          ],
+          "correction": [
+            -0.37455934903,
+            0.372691581319,
+            0.0232963052565
+          ],
+          "score": 0.999547285783,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0.1,
+          "ray_valid_count": 50,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.41458639456,
+            2.41215812291,
+            3.00602913665
+          ],
+          "correction": [
+            -0.465413605442,
+            0.142158122911,
+            -0.0639708633509
+          ],
+          "score": 0.941429265206,
+          "known_ratio": 1,
+          "near_ratio": 0.96,
+          "ray_conflict_ratio": 0.22,
+          "ray_valid_count": 50,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.62954861164,
+            2.86156452932,
+            3.18056307683
+          ],
+          "correction": [
+            -0.250451388358,
+            0.59156452932,
+            0.110563076826
+          ],
+          "score": 0.843669058932,
+          "known_ratio": 0.92,
+          "near_ratio": 0.9,
+          "ray_conflict_ratio": 0.4,
+          "ray_valid_count": 50,
+          "boundary": false
+        }
+      ]
+    },
+    "31": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0,
+        2.39,
+        1.68
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.542979585749,
+      "discrete_score": 0.910721943182,
+      "discrete_best": [
+        0,
+        2.63,
+        1.68
+      ],
+      "margin": 0.221113345626,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 154,
+      "evaluated": 3386,
+      "pruned": 4403,
+      "field_bytes": 327680,
+      "workspace_bytes": 2464,
+      "build_ms": 1.576413,
+      "search_ms": 31.228582,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            -0.0286820539243,
+            2.61922449374,
+            1.67853481843
+          ],
+          "correction": [
+            -0.0286820539243,
+            0.229224493738,
+            -0.00146518156538
+          ],
+          "score": 0.917096466915,
+          "known_ratio": 0.987012987,
+          "near_ratio": 0.935064935,
+          "ray_conflict_ratio": 0.100671141,
+          "ray_valid_count": 149,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.331152635507,
+            2.63022833944,
+            1.67139884943
+          ],
+          "correction": [
+            0.331152635507,
+            0.240228339438,
+            -0.00860115056608
+          ],
+          "score": 0.695983121289,
+          "known_ratio": 0.961038961,
+          "near_ratio": 0.668831169,
+          "ray_conflict_ratio": 0.0939597315,
+          "ray_valid_count": 149,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.00129072626879,
+            2.38998578659,
+            1.76580163249
+          ],
+          "correction": [
+            0.00129072626879,
+            -1.42134145178e-05,
+            0.0858016324882
+          ],
+          "score": 0.66004038582,
+          "known_ratio": 0.896103896,
+          "near_ratio": 0.623376623,
+          "ray_conflict_ratio": 0.201342282,
+          "ray_valid_count": 149,
+          "boundary": false
+        }
+      ]
+    },
+    "32": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0.02,
+        2.39,
+        6.26
+      ],
+      "accepted": false,
+      "reason_bits": 40,
+      "reasons": [
+        "ambiguous",
+        "too_few_points"
+      ],
+      "predicted_score": 0.525740039467,
+      "discrete_score": 1,
+      "discrete_best": [
+        0.38,
+        2.63,
+        6.23382006122
+      ],
+      "margin": 0,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 12,
+      "evaluated": 2268,
+      "pruned": 3939,
+      "field_bytes": 327680,
+      "workspace_bytes": 192,
+      "build_ms": 1.637375,
+      "search_ms": 2.05066,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            0.38,
+            2.63,
+            6.23382006122
+          ],
+          "correction": [
+            0.36,
+            0.24,
+            -0.0261799387799
+          ],
+          "score": 1,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0,
+          "ray_valid_count": 12,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.74,
+            2.63,
+            6.23382006122
+          ],
+          "correction": [
+            0.72,
+            0.24,
+            -0.0261799387799
+          ],
+          "score": 1,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0,
+          "ray_valid_count": 12,
+          "boundary": false
+        },
+        {
+          "pose": [
+            1.1,
+            2.63,
+            6.23382006122
+          ],
+          "correction": [
+            1.08,
+            0.24,
+            -0.0261799387799
+          ],
+          "score": 1,
+          "known_ratio": 1,
+          "near_ratio": 1,
+          "ray_conflict_ratio": 0,
+          "ray_valid_count": 12,
+          "boundary": false
+        }
+      ]
+    },
+    "33": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        5.88,
+        2.51,
+        3.09
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.549721957379,
+      "discrete_score": 0.981145912033,
+      "discrete_best": [
+        5.52,
+        2.87,
+        3.15108652382
+      ],
+      "margin": 0.0494877135795,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 52,
+      "evaluated": 2229,
+      "pruned": 4246,
+      "field_bytes": 327680,
+      "workspace_bytes": 832,
+      "build_ms": 1.576711,
+      "search_ms": 8.880204,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            5.50472638893,
+            2.86726177179,
+            3.15416417861
+          ],
+          "correction": [
+            -0.37527361107,
+            0.357261771785,
+            0.0641641786056
+          ],
+          "score": 0.986337359855,
+          "known_ratio": 1,
+          "near_ratio": 0.980769231,
+          "ray_conflict_ratio": 0.0192307692,
+          "ray_valid_count": 52,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.4079174493,
+            2.63936220149,
+            3.06689300471
+          ],
+          "correction": [
+            -0.472082550703,
+            0.129362201488,
+            -0.0231069952868
+          ],
+          "score": 0.936849646275,
+          "known_ratio": 1,
+          "near_ratio": 0.980769231,
+          "ray_conflict_ratio": 0.153846154,
+          "ray_valid_count": 52,
+          "boundary": false
+        },
+        {
+          "pose": [
+            5.59908535743,
+            3.10076675445,
+            3.24143066686
+          ],
+          "correction": [
+            -0.280914642568,
+            0.590766754446,
+            0.151430666865
+          ],
+          "score": 0.850168732526,
+          "known_ratio": 0.942307692,
+          "near_ratio": 0.903846154,
+          "ray_conflict_ratio": 0.365384615,
+          "ray_valid_count": 52,
+          "boundary": false
+        }
+      ]
+    },
+    "34": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0.03,
+        2.51,
+        2.74
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.357313346903,
+      "discrete_score": 0.922350834965,
+      "discrete_best": [
+        -0.09,
+        2.87,
+        2.74872664626
+      ],
+      "margin": 0.239344826269,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 149,
+      "evaluated": 3303,
+      "pruned": 4781,
+      "field_bytes": 327680,
+      "workspace_bytes": 2384,
+      "build_ms": 1.611188,
+      "search_ms": 31.519428,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            -0.0657936513036,
+            2.8519537648,
+            2.75207975397
+          ],
+          "correction": [
+            -0.0957936513036,
+            0.341953764796,
+            0.0120797539726
+          ],
+          "score": 0.932926759504,
+          "known_ratio": 0.986577181,
+          "near_ratio": 0.946308725,
+          "ray_conflict_ratio": 0.147887324,
+          "ray_valid_count": 142,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.266904799789,
+            2.9895740067,
+            2.72255457497
+          ],
+          "correction": [
+            0.236904799789,
+            0.4795740067,
+            -0.0174454250348
+          ],
+          "score": 0.693581933235,
+          "known_ratio": 0.953020134,
+          "near_ratio": 0.677852349,
+          "ray_conflict_ratio": 0.161971831,
+          "ray_valid_count": 142,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.0284055615575,
+            2.63919388046,
+            2.83934656161
+          ],
+          "correction": [
+            -0.00159443844254,
+            0.129193880464,
+            0.0993465616071
+          ],
+          "score": 0.669902356652,
+          "known_ratio": 0.926174497,
+          "near_ratio": 0.624161074,
+          "ray_conflict_ratio": 0.163120567,
+          "ray_valid_count": 141,
+          "boundary": false
+        }
+      ]
+    },
+    "35": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        -0.11,
+        0.36,
+        5.01
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.838803584777,
+      "discrete_score": 0.896659336287,
+      "discrete_best": [
+        -0.11,
+        0.48,
+        4.99254670748
+      ],
+      "margin": 0.175659005656,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 129,
+      "evaluated": 1923,
+      "pruned": 4057,
+      "field_bytes": 327680,
+      "workspace_bytes": 2064,
+      "build_ms": 1.57916,
+      "search_ms": 20.264103,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            -0.116976010444,
+            0.470287384384,
+            4.99368307006
+          ],
+          "correction": [
+            -0.00697601044436,
+            0.110287384384,
+            -0.0163169299443
+          ],
+          "score": 0.897695138446,
+          "known_ratio": 0.976744186,
+          "near_ratio": 0.906976744,
+          "ray_conflict_ratio": 0.15,
+          "ray_valid_count": 120,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.242894125664,
+            0.47997906972,
+            4.99253964134
+          ],
+          "correction": [
+            0.352894125664,
+            0.11997906972,
+            -0.0174603586575
+          ],
+          "score": 0.722036132791,
+          "known_ratio": 0.984496124,
+          "near_ratio": 0.705426357,
+          "ray_conflict_ratio": 0.0916666667,
+          "ray_valid_count": 120,
+          "boundary": false
+        },
+        {
+          "pose": [
+            -0.22710712891,
+            0.718093676169,
+            4.90641653005
+          ],
+          "correction": [
+            -0.11710712891,
+            0.358093676169,
+            -0.103583469948
+          ],
+          "score": 0.687348897612,
+          "known_ratio": 0.906976744,
+          "near_ratio": 0.697674419,
+          "ray_conflict_ratio": 0.201680672,
+          "ray_valid_count": 119,
+          "boundary": false
+        }
+      ]
+    },
+    "36": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        -0.15,
+        0.32,
+        0.29
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.568653833979,
+      "discrete_score": 0.800985370101,
+      "discrete_best": [
+        -0.03,
+        0.08,
+        0.30745329252
+      ],
+      "margin": 0.0872355298892,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 61,
+      "evaluated": 3273,
+      "pruned": 5246,
+      "field_bytes": 327680,
+      "workspace_bytes": 976,
+      "build_ms": 1.586238,
+      "search_ms": 13.821421,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            0.00115213022629,
+            0.0830548006836,
+            0.307212571924
+          ],
+          "correction": [
+            0.151152130226,
+            -0.236945199316,
+            0.0172125719239
+          ],
+          "score": 0.801556256235,
+          "known_ratio": 0.983606557,
+          "near_ratio": 0.836065574,
+          "ray_conflict_ratio": 0.169491525,
+          "ray_valid_count": 59,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.359422327007,
+            0.0477265972004,
+            0.307622735591
+          ],
+          "correction": [
+            0.509422327007,
+            -0.2722734028,
+            0.0176227355912
+          ],
+          "score": 0.714320726345,
+          "known_ratio": 0.983606557,
+          "near_ratio": 0.704918033,
+          "ray_conflict_ratio": 0.305084746,
+          "ray_valid_count": 59,
+          "boundary": false
+        },
+        {
+          "pose": [
+            1.05,
+            0.0206990520988,
+            0.310788837601
+          ],
+          "correction": [
+            1.2,
+            -0.299300947901,
+            0.020788837601
+          ],
+          "score": 0.662038592318,
+          "known_ratio": 0.983606557,
+          "near_ratio": 0.639344262,
+          "ray_conflict_ratio": 0.203389831,
+          "ray_valid_count": 59,
+          "boundary": true
+        }
+      ]
+    },
+    "37": {
+      "schema": 1,
+      "method": "bnb",
+      "prediction": [
+        0.35,
+        0.26,
+        3.37
+      ],
+      "accepted": true,
+      "reason_bits": 0,
+      "reasons": [],
+      "predicted_score": 0.851326906465,
+      "discrete_score": 0.925827807916,
+      "discrete_best": [
+        0.35,
+        0.38,
+        3.37872664626
+      ],
+      "margin": 0.149954752823,
+      "margin_note": "diagnostic among retained refined peaks, not certified global confidence",
+      "actual_window_xy_m": 1.2,
+      "actual_angle_step_rad": 0.00872664626,
+      "point_count": 83,
+      "evaluated": 3206,
+      "pruned": 3899,
+      "field_bytes": 327680,
+      "workspace_bytes": 1328,
+      "build_ms": 1.574244,
+      "search_ms": 16.094269,
+      "timing_includes_trace_io": false,
+      "config": {
+        "window_xy_m": 1.2,
+        "window_angle_rad": 0.261799388,
+        "angle_step_rad": 0.00872664626,
+        "sigma_m": 0.18,
+        "cutoff_m": 0.6,
+        "occupied_threshold": 151,
+        "refine_iterations": 25,
+        "distinct_xy_m": 0.36,
+        "distinct_angle_rad": 0.0872664626,
+        "min_score": 0.55,
+        "min_near_ratio": 0.5,
+        "min_known_ratio": 0.5,
+        "min_margin": 0.02
+      },
+      "candidates": [
+        {
+          "pose": [
+            0.368825252509,
+            0.358326774492,
+            3.38831273727
+          ],
+          "correction": [
+            0.018825252509,
+            0.0983267744923,
+            0.01831273727
+          ],
+          "score": 0.93441026975,
+          "known_ratio": 0.975903614,
+          "near_ratio": 0.939759036,
+          "ray_conflict_ratio": 0.0240963855,
+          "ray_valid_count": 83,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.566552864434,
+            0.140422663355,
+            3.47557928107
+          ],
+          "correction": [
+            0.216552864434,
+            -0.119577336645,
+            0.105579281067
+          ],
+          "score": 0.784455516926,
+          "known_ratio": 0.915662651,
+          "near_ratio": 0.831325301,
+          "ray_conflict_ratio": 0.289156627,
+          "ray_valid_count": 83,
+          "boundary": false
+        },
+        {
+          "pose": [
+            0.349179406356,
+            0.499687824418,
+            3.30104578709
+          ],
+          "correction": [
+            -0.000820593643973,
+            0.239687824418,
+            -0.0689542129088
+          ],
+          "score": 0.693308830643,
+          "known_ratio": 0.963855422,
+          "near_ratio": 0.674698795,
+          "ray_conflict_ratio": 0.0602409639,
+          "ray_valid_count": 83,
+          "boundary": false
+        }
+      ]
+    }
+  }
+}
